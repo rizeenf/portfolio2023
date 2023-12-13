@@ -20,7 +20,7 @@ const projects = [
     framework: "React, Tailwind",
     demo: "https://rize-socialmedia.vercel.app/",
     src: "https://github.com/rizeenf/socialmedia",
-    color: "bg-gray-300",
+    color: "bg-gray-50",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const projects = [
     framework: "React, Sass, MaterialUI, Recharts",
     demo: "https://zashboard.vercel.app",
     src: "https://github.com/rizeenf/admindashboard",
-    color: "bg-orange-100",
+    color: "bg-orange-50",
   },
 ];
 
