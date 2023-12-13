@@ -3,7 +3,7 @@ import React from "react";
 const Intro = () => {
   return (
     <div className="h-[93svh] snap-end" id="home">
-      <div className="flex h-full px-10 wrapper">
+      <div className="flex h-full gap-5 px-10 wrapper">
         <div className="flex flex-col items-center justify-center flex-1 left">
           <h1 className="text-3xl font-extrabold text-center">
             Hi there! I'm{" "}
@@ -15,13 +15,13 @@ const Intro = () => {
           <div className="flex gap-5 mt-5 text-center">
             <a
               href="#projects"
-              className="p-2 text-xs text-white bg-orange-400 border border-white rounded-lg shadow hover:bg-orange-500"
+              className="p-2 transition-all duration-300 hover:scale-[1.03] text-xs text-white bg-orange-400 border border-white rounded-lg shadow hover:bg-orange-500"
             >
               My projects
             </a>
             <a
               href="/RIZKI NURPADILAH - CV REACT JS.pdf"
-              className="p-2 text-xs bg-white border border-orange-400 rounded-lg shadow hover:bg-orange-50"
+              className="p-2 text-xs transition-all duration-300 hover:scale-[1.03] bg-white border border-orange-400 rounded-lg shadow hover:bg-orange-50"
               download
             >
               Get my resume

@@ -1,4 +1,4 @@
-import { AlignRight, X } from "lucide-react";
+import { AlignRight, Code2, Home, Layers3, UserRound, X } from "lucide-react";
 import React from "react";
 
 const ListMenu = ({ isOpened, handleOpened }) => {
@@ -13,15 +13,42 @@ const ListMenu = ({ isOpened, handleOpened }) => {
           onClick={handleOpened}
           className="self-end p-2 mx-2 bg-orange-100 rounded cursor-pointer hover:bg-orange-200"
         />
-        <ul className="flex flex-col items-center gap-5 ">
+        <ul className="flex flex-col items-start gap-5 ml-5 ">
           <li>
-            <a href="#home">Home</a>
+            <a
+              href="#home"
+              className="flex items-center justify-center gap-2 border-b"
+            >
+              <Home size={15} />
+              Home
+            </a>
           </li>
           <li>
-            <a href="#about">About me</a>
+            <a
+              href="#about"
+              className="flex items-center justify-center gap-2 border-b"
+            >
+              <UserRound size={15} />
+              About me
+            </a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <a
+              href="#skills"
+              className="flex items-center justify-center gap-2 border-b"
+            >
+              <Code2 size={15} />
+              Skills
+            </a>
+          </li>
+          <li>
+            <a
+              href="#projects"
+              className="flex items-center justify-center gap-2 border-b"
+            >
+              <Layers3 size={15} />
+              Projects
+            </a>
           </li>
           <li>
             <a

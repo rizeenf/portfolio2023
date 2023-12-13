@@ -3,12 +3,12 @@ import React from "react";
 const About = () => {
   return (
     <div className="h-[93svh] snap-end" id="about">
-      <div className="flex h-full gap-5 min-[300px]:px-10 md:px-40 wrapper">
+      <div className="flex min-[300px]:flex-col md:flex-row h-full gap-5 min-[300px]:px-10 md:px-40 wrapper">
         <div className="flex flex-col items-center justify-center flex-[2] right">
           <img
-            src="/working.png"
+            src="/work.gif"
             alt=""
-            className="object-cover min-[300px]:w-32 md:w-40 aspect-square"
+            className="object-cover min-[300px]:w-56 md:w-72 min-w-[12rem] aspect-square"
           />
         </div>
         <div className="flex flex-col items-center justify-center flex-[3] left">

@@ -2,7 +2,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(/me.png);
-  animation: blobob 9s ease-in-out infinite alternate;
+  animation: blobob 8s ease-in-out infinite alternate;
   border: 2px orangered dashed;
 }
 
@@ -15,4 +15,12 @@
     transform: translatey(0%);
     border-radius: 31% 69% 38% 62% / 44% 56% 44% 56%;
   }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

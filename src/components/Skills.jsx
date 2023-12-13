@@ -73,10 +73,13 @@ const skillLearning = [
 
 const Skills = () => {
   return (
-    <div className="h-[93svh] snap-end" id="skills">
-      <div className="flex flex-col items-center justify-center header min-[300px]:p-14 md:p-24">
-        <h1 className="mb-5 text-3xl font-bold ">Tech stack</h1>
-        <h4 className="mb-5 text-base text-gray-600 uppercase">Using Now : </h4>
+    <div
+      className="h-[93svh] snap-end flex justify-center items-center"
+      id="skills"
+    >
+      <div className="flex flex-col items-center justify-center header ">
+        <h1 className="text-3xl font-bold ">Tech stack</h1>
+        <h4 className="mt-5 text-base text-gray-600 uppercase">Using Now : </h4>
         <div className="flex flex-row flex-wrap items-center min-[300px]:max-w-xs md:max-w-xl justify-around gap-10">
           {skill.map((item) => (
             <div
@@ -86,7 +89,7 @@ const Skills = () => {
               <img
                 src={item.image}
                 alt={item.name}
-                className="object-cover h-10 aspect-auto"
+                className="object-cover h-8 aspect-auto"
               />
               <span className="text-xs font-thin text-gray-600 uppercase">
                 {item.name}
@@ -104,7 +107,7 @@ const Skills = () => {
               <img
                 src={item.image}
                 alt={item.name}
-                className="object-cover h-10 aspect-auto"
+                className="object-cover h-8 aspect-auto"
               />
               <span className="text-xs font-thin text-gray-600 uppercase">
                 {item.name}
