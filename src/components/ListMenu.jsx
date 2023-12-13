@@ -5,60 +5,55 @@ const ListMenu = ({ isOpened, handleOpened }) => {
   return (
     <>
       <div
-        className={`fixed z-10 overflow-auto top-0 right-0 bg-white transition-all duration-500 h-full flex justify-center flex-col max-w-[100dvw] ${
+        className={`fixed z-10 overflow-auto top-0 right-0 bg-white transition-all duration-500 h-full flex justify-between flex-col max-w-[100svw] ${
           isOpened ? "w-[20rem]" : "w-[0]"
         }`}
       >
         <X
           onClick={handleOpened}
-          className="self-end p-2 mx-2 bg-orange-100 rounded cursor-pointer hover:bg-orange-200"
+          size={32}
+          className="self-end p-2 m-2 bg-orange-100 rounded cursor-pointer hover:bg-orange-200"
         />
-        <ul className="flex flex-col items-start gap-5 ml-5 ">
-          <li>
+        <div className="flex flex-col flex-[10] items-start justify-center gap-5 ml-10 ">
+          <div className="flex flex-col items-start gap-5 ">
             <a
               href="#home"
-              className="flex items-center justify-center gap-2 border-b"
+              className="flex items-center justify-center gap-2 duration-150 hover:scale-105"
             >
               <Home size={15} />
               Home
             </a>
-          </li>
-          <li>
             <a
               href="#about"
-              className="flex items-center justify-center gap-2 border-b"
+              className="flex items-center justify-center gap-2 duration-150 hover:scale-105"
             >
               <UserRound size={15} />
               About me
             </a>
-          </li>
-          <li>
             <a
               href="#skills"
-              className="flex items-center justify-center gap-2 border-b"
+              className="flex items-center justify-center gap-2 duration-150 hover:scale-105"
             >
               <Code2 size={15} />
               Skills
             </a>
-          </li>
-          <li>
             <a
               href="#projects"
-              className="flex items-center justify-center gap-2 border-b"
+              className="flex items-center justify-center gap-2 duration-150 hover:scale-105"
             >
               <Layers3 size={15} />
               Projects
             </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className="p-2 text-xs text-white bg-orange-400 rounded shadow hover:bg-orange-500"
-            >
-              Contact me
-            </a>
-          </li>
-        </ul>
+          </div>
+        </div>
+        <div className="flex-[5] self-center">
+          <a
+            href="#contact"
+            className="p-2 text-xs duration-300 bg-white border border-orange-400 rounded-lg shadow hover:scale-105 hover:bg-orange-50"
+          >
+            Contact me
+          </a>
+        </div>
       </div>
     </>
   );

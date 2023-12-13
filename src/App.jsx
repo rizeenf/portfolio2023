@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import FloatingMenu from "./components/FloatingMenu";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Contact />
       <FloatingMenu />
     </div>
   );

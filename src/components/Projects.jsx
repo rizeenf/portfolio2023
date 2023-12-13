@@ -52,15 +52,15 @@ const Projects = () => {
       className="h-[93svh] overflow-x-hidden no-scrollbar snap-mandatory snap-y "
       id="projects"
     >
-      <div className="flex flex-col items-center justify-center mb-8 snap-start snap-always header">
-        <h1 className="mt-3 text-3xl font-bold">My Projects</h1>
-        <h4 className="flex items-center gap-2 text-base text-center text-gray-600">
+      <div className="flex flex-col items-center justify-center mb-3 snap-start snap-always header">
+        <h1 className="mt-3 text-base font-bold text-gray-400">MY PROJECTS</h1>
+        <h4 className="flex items-center gap-2 text-3xl text-center text-gray-700">
           <img
             src="/clipboard.png"
             alt="clipboard"
-            className="object-cover h-6 aspect-square"
+            className="object-cover h-10 aspect-square"
           />
-          Each project is a unique piece of my development
+          Each project is a unique <br /> piece of my development
         </h4>
       </div>
       <div className="flex min-[300px]:flex-col md:flex-row items-center justify-center snap-end h-[77svh] gap-5 border-b p-14 bg-gray-50">

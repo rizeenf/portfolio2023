@@ -21,7 +21,7 @@ const Intro = () => {
             </a>
             <a
               href="/RIZKI NURPADILAH - CV REACT JS.pdf"
-              className="p-2 text-xs transition-all duration-300 hover:scale-[1.03] bg-white border border-orange-400 rounded-lg shadow hover:bg-orange-50"
+              className="p-2 text-xs transition-all duration-300 bg-white border border-orange-400 rounded-lg shadow hover:scale-105 hover:bg-orange-50"
               download
             >
               Get my resume
