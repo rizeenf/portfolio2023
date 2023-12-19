@@ -14,7 +14,7 @@ const projects = [
   {
     id: 2,
     link: "rize-socialmedia.vercel.app",
-    img: "/projSocialmed.png",
+    img: "/projSocialmed2.png",
     name: "Sipaling social | Socialmedia",
     desc: "Mini social media that you can upload, post, like, comment, and share such as usual social media",
     framework: "React, Tailwind",
@@ -25,7 +25,7 @@ const projects = [
   {
     id: 3,
     link: "rize-shoprizing.vercel.app",
-    img: "/projShoprizing.png",
+    img: "/projShoprizing2.png",
     name: "Shoprizing | Marketplace",
     desc: "Shopping application using Image API from Pixabay, it also using Redux for storing Cart",
     framework: "React, Redux, Sass",
@@ -36,7 +36,7 @@ const projects = [
   {
     id: 4,
     link: "https://zashboard.vercel.app",
-    img: "/projZashboard.png",
+    img: "/projZashboard2.png",
     name: "Zashboard | Admin dashboard",
     desc: "Dashboard provides charts for every data collected, using Charts from recharts and Data Table from MaterialUI",
     framework: "React, Sass, MaterialUI, Recharts",
@@ -66,8 +66,8 @@ const Projects = () => {
       <div className="flex min-[300px]:flex-col md:flex-row items-center justify-center snap-end h-[77svh] gap-5 border-b p-14 bg-gray-50">
         <div className="left flex-[3] flex justify-center items-center aspect-video object-cover overflow-hidden">
           <img
-            src="/projChatApp.png"
-            alt="projChatApp.png"
+            src="/projChatapp2.png"
+            alt="projChatapp2.png"
             className="max-h-[20rem] min-h-[12rem]"
           />
         </div>
