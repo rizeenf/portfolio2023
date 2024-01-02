@@ -1,4 +1,12 @@
-import React from "react";
+import {
+  AlignJustify,
+  Facebook,
+  Github,
+  Linkedin,
+  MessageSquare,
+  MessageSquarePlus,
+  Twitter,
+} from "lucide-react";
 
 const Contact = () => {
   return (
@@ -8,7 +16,7 @@ const Contact = () => {
     >
       <div className="flex flex-col items-center justify-center">
         <h1 className="mt-3 text-base font-bold text-gray-400">CONTACT ME</h1>
-        <h4 className="flex items-center gap-2 text-3xl text-center text-gray-700">
+        <h4 className="flex items-center gap-2  md:text-3xl min-[300px]:text-2xl text-center text-gray-700">
           <img
             src="/contact.svg"
             alt="contact"
@@ -22,7 +30,16 @@ const Contact = () => {
           <div className="flex flex-col p-10 border rounded-xl h-[16rem] w-[22rem]">
             <div className="flex flex-col flex-1 top">
               <strong> My WhatsApp</strong>
-              <span className="">(+62)877 8665 3726</span>
+              <span>
+                <a
+                  href="https://wa.me/6287786653726"
+                  className="flex flex-row hover:text-orange-400"
+                  target="_blank"
+                >
+                  <MessageSquarePlus />
+                  (+62)877 8665 3726
+                </a>
+              </span>
             </div>
             <div className="flex flex-col justify-end flex-1 gap-2 bottom">
               <div className="text-xs">
@@ -49,6 +66,8 @@ const Contact = () => {
                 id="name"
                 className="max-w-[10rem] p-2 bg-transparent border rounded placeholder:text-xs"
                 placeholder="Name*"
+                required
+                minLength={5}
               />
               <input
                 type="email"
@@ -56,6 +75,8 @@ const Contact = () => {
                 id="email"
                 className="p-2 max-w-[12rem] bg-transparent border rounded placeholder:text-xs"
                 placeholder="Email*"
+                required
+                minLength={5}
               />
             </div>
             <input
@@ -64,6 +85,8 @@ const Contact = () => {
               id="subject"
               className="p-2 bg-transparent border rounded placeholder:text-xs"
               placeholder="How can i help you?"
+              required
+              minLength={5}
             />
             <textarea
               type="textarea"
@@ -72,6 +95,7 @@ const Contact = () => {
               id="text"
               className="p-2 bg-transparent border rounded placeholder:text-xs"
               placeholder="How can i help you?"
+              required
             />
             <div className="flex flex-row items-center justify-between gap-2">
               <div className="flex flex-row items-center gap-2">
@@ -89,7 +113,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-between flex-1 min-[300px]:px-[2rem] md:px-40 bg-orange-50">
+      <div className="flex flex-row items-center justify-between flex-1 min-[300px]:px-[2rem] md:px-40 bg-orange-50 min-h-[3rem] ">
         <div className="flex flex-row items-center gap-2">
           <img src="/logo.svg" alt="Logo" className="w-10" />
           <span className="text-[0.7rem] italic font-thin text-gray-700">
@@ -100,33 +124,20 @@ const Contact = () => {
           Copyright 2023. All Rights Reserved
         </span>
         <div className="flex flex-row items-center gap-5">
-          <a href="" target="_blank">
-            <img
-              src="/linkedin.svg"
-              alt="linkedin"
-              className="w-4 rounded aspect-square"
-            />
+          <a
+            href="https://www.linkedin.com/in/rizki-nurpadilah/"
+            target="_blank"
+          >
+            <Linkedin size={16} color="orangered" />
           </a>
-          <a href="" target="_blank">
-            <img
-              src="/github.svg"
-              alt="github"
-              className="w-4 rounded aspect-square"
-            />
+          <a href="https://github.com/rizeenf" target="_blank">
+            <Github size={16} color="orangered" />
           </a>
-          <a href="" target="_blank">
-            <img
-              src="/twitter.svg"
-              alt="twitter"
-              className="w-4 rounded aspect-square"
-            />
+          <a href="https://twitter.com/rizenf" target="_blank">
+            <Twitter size={16} color="orangered" />
           </a>
-          <a href="" target="_blank">
-            <img
-              src="/facebook.svg"
-              alt="facebook"
-              className="w-4 rounded aspect-square"
-            />
+          <a href="https://www.facebook.com/rizenf" target="_blank">
+            <Facebook size={16} color="orangered" />
           </a>
         </div>
       </div>

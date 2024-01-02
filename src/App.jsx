@@ -10,15 +10,15 @@ const About = lazy(() => import("./components/About"));
 
 function App() {
   return (
-    <div className="h-screen overflow-auto !scroll-smooth relative">
+    <div className="h-screen overflow-auto !scroll-smooth relative snap-mandatory snap-y">
       <Navbar />
       <Suspense fallback={"Loading .."}>
         <Intro />
         <About />
-        <Skills />
-        <Projects />
-        <Contact />
       </Suspense>
+      <Skills />
+      <Projects />
+      <Contact />
       <FloatingMenu />
     </div>
   );

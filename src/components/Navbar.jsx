@@ -1,4 +1,10 @@
-import { AlignJustify, AlignRight, List } from "lucide-react";
+import {
+  AlignJustify,
+  Facebook,
+  Github,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 import React, { useState } from "react";
 import ListMenu from "./ListMenu";
 
@@ -17,7 +23,7 @@ const Navbar = () => {
       </a>
       <div className="right">
         <ul className=" min-[300px]:hidden md:flex flex-row gap-5 justify-center items-center text-xs ">
-          <li className="transition-all duration-300 hover:scale-[1.03]">
+          {/* <li className="transition-all duration-300 hover:scale-[1.03]">
             <a href="#home">Home</a>
           </li>
           <li className="transition-all duration-300 hover:scale-[1.03]">
@@ -33,8 +39,27 @@ const Navbar = () => {
             >
               Contact Me
             </a>
-          </li>
+          </li> */}
+
+          <div className="flex flex-row items-center gap-5">
+            <a
+              href="https://www.linkedin.com/in/rizki-nurpadilah/"
+              target="_blank"
+            >
+              <Linkedin size={16} color="orangered" />
+            </a>
+            <a href="https://github.com/rizeenf" target="_blank">
+              <Github size={16} color="orangered" />
+            </a>
+            <a href="https://twitter.com/rizenf" target="_blank">
+              <Twitter size={16} color="orangered" />
+            </a>
+            <a href="https://www.facebook.com/rizenf" target="_blank">
+              <Facebook size={16} color="orangered" />
+            </a>
+          </div>
         </ul>
+
         <div className=" sm:block md:hidden">
           <AlignJustify onClick={handleOpened} className="cursor-pointer " />
         </div>

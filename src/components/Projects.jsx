@@ -14,7 +14,7 @@ const projects = [
   {
     id: 2,
     link: "rize-socialmedia.vercel.app",
-    img: "/projSocialmed2.png",
+    img: "/projSocialmed2.jpeg",
     name: "Sipaling social | Socialmedia",
     desc: "Mini social media that you can upload, post, like, comment, and share such as usual social media",
     framework: "React, Tailwind",
@@ -25,7 +25,7 @@ const projects = [
   {
     id: 3,
     link: "rize-shoprizing.vercel.app",
-    img: "/projShoprizing2.png",
+    img: "/projShoprizing2.jpeg",
     name: "Shoprizing | Marketplace",
     desc: "Shopping application using Image API from Pixabay, it also using Redux for storing Cart",
     framework: "React, Redux, Sass",
@@ -49,12 +49,12 @@ const projects = [
 const Projects = () => {
   return (
     <div
-      className="h-[93svh] overflow-x-hidden no-scrollbar snap-mandatory snap-y "
+      className="overflow-x-hidden snap-mandatory snap-y snap-start no-scrollbar"
       id="projects"
     >
       <div className="flex flex-col items-center justify-center mb-3 snap-start snap-always header">
         <h1 className="mt-3 text-base font-bold text-gray-400">MY PROJECTS</h1>
-        <h4 className="flex items-center gap-2 text-3xl text-center text-gray-700">
+        <h4 className="flex items-center gap-2 md:text-3xl min-[300px]:text-xl text-center text-gray-700">
           <img
             src="/clipboard.png"
             alt="clipboard"
@@ -63,12 +63,12 @@ const Projects = () => {
           Each project is a unique <br /> piece of my development
         </h4>
       </div>
-      <div className="flex min-[300px]:flex-col md:flex-row items-center justify-center snap-end h-[77svh] gap-5 border-b p-14 bg-gray-50">
+      <div className="flex min-[300px]:flex-col md:flex-row items-center justify-center h-[77svh] gap-5 border-b p-14 bg-gray-50">
         <div className="left flex-[3] flex justify-center items-center aspect-video object-cover overflow-hidden">
           <img
             src="/projChatapp2.png"
             alt="projChatapp2.png"
-            className="max-h-[20rem] min-h-[12rem]"
+            className="md:h-[20rem] min-[300px]:h-[12rem] rounded-xl"
           />
         </div>
         <div className="right flex justify-center items-center flex-[2] max-h-[24rem] detail">
@@ -108,7 +108,7 @@ const Projects = () => {
                     className="object-cover w-6 h-6 overflow-hidden rounded-full "
                     alt="Vercel"
                   />
-                  Live demo
+                  Live demo &rarr;
                 </a>
               </div>
             </div>
@@ -127,7 +127,7 @@ const Projects = () => {
             <img
               src={proj.img}
               alt={proj.img}
-              className="max-h-[20rem] min-h-[12rem]"
+              className="md:h-[20rem] min-[300px]:h-[12rem] rounded-xl"
             />
           </div>
           <div className="right flex justify-center items-center flex-[2] max-h-[24rem] detail">
@@ -164,7 +164,7 @@ const Projects = () => {
                       className="object-cover w-6 h-6 overflow-hidden rounded-full "
                       alt="Vercel"
                     />
-                    Live demo
+                    Live demo &rarr;
                   </a>
                 </div>
               </div>

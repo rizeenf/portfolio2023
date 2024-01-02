@@ -1,4 +1,4 @@
-import { Code2, Home, Layers3, UserRound } from "lucide-react";
+import { BookUser, Code2, Home, Layers3, UserRound } from "lucide-react";
 import React from "react";
 
 const FloatingMenu = () => {
@@ -30,6 +30,12 @@ const FloatingMenu = () => {
         className="p-1 bg-transparent border rounded-full hover:bg-orange-100 hover:scale-[1.03]"
       >
         <Layers3 size={15} />
+      </a>
+      <a
+        href="#contact"
+        className="p-1 bg-transparent border rounded-full hover:bg-orange-100 hover:scale-[1.03]"
+      >
+        <BookUser size={15} />
       </a>
     </div>
   );

@@ -80,7 +80,7 @@ const Skills = () => {
       <div className="flex flex-col items-center justify-center header ">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-base font-bold text-gray-400">TECH STACK</h1>
-          <h4 className="flex items-center gap-2 text-3xl text-center text-gray-700">
+          <h4 className="flex items-center gap-2 md:text-3xl min-[300px]:text-2xl text-center text-gray-700">
             <img
               src="/terminal.png"
               alt="terminal"
