@@ -49,7 +49,7 @@ const ListMenu = ({ isOpened, handleOpened }) => {
         <div className="flex-[5] self-center">
           <a
             href="#contact"
-            className="p-2 text-xs duration-300 bg-white border border-orange-400 rounded-lg shadow hover:scale-105 hover:bg-orange-50"
+            className="p-2 text-xs text-orange-500 transition-all duration-300 bg-white border border-orange-400 rounded-lg shadow hover:bg-orange-500 hover:border-white hover:text-white"
           >
             Contact me
           </a>

@@ -4,7 +4,7 @@ import React from "react";
 const FloatingMenu = () => {
   return (
     <div
-      className="fixed flex min-[300px]:flex-row md:flex-col gap-2 p-1 bg-transparent border rounded-full md:top-1/3 md:left-3 
+      className="fixed flex min-[300px]:flex-row md:flex-col gap-2 p-1 bg-transparent border rounded-full min-[300px]:bottom-10 min-[300px]:left-1/3 md:bottom-1/2 md:left-3 
     "
     >
       <a
