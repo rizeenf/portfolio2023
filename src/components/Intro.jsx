@@ -1,4 +1,7 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
+import Load from "./Load";
+
+const ImageIntro = lazy(() => import("./ImageIntro"));
 
 const Intro = () => {
   return (
@@ -15,13 +18,13 @@ const Intro = () => {
           <div className="flex gap-5 mt-5 text-center">
             <a
               href="#projects"
-              className="p-2 transition-all duration-300 hover:scale-[1.03] text-xs text-white bg-orange-400 border border-white rounded-lg shadow hover:bg-orange-500"
+              className="p-2 text-xs text-white transition-all duration-300 bg-orange-400 border border-white rounded-lg shadow hover:bg-white hover:border-orange-400 hover:text-orange-500"
             >
               My projects
             </a>
             <a
               href="/RIZKI NURPADILAH - CV REACT JS.pdf"
-              className="p-2 text-xs transition-all duration-300 bg-white border border-orange-400 rounded-lg shadow hover:scale-105 hover:bg-orange-50"
+              className="p-2 text-xs text-orange-500 transition-all duration-300 bg-white border border-orange-400 rounded-lg shadow hover:bg-orange-500 hover:border-white hover:text-white"
               download
             >
               Get my resume
@@ -29,7 +32,9 @@ const Intro = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center flex-1 right">
-          <div className="min-[300px]:h-48 min-[300px]:w-40 md:h-64 md:w-56 imageBlob"></div>
+          <Suspense fallback={<Load />}>
+            <ImageIntro />
+          </Suspense>
         </div>
       </div>
     </div>
