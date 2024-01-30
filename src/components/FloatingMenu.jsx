@@ -9,7 +9,7 @@ const FloatingMenu = () => {
         opacity: 0,
         x: "300%",
       }}
-      whileInView={{
+      animate={{
         opacity: 1,
         x: 0,
       }}
