@@ -18,8 +18,10 @@ const ImageIntro = () => {
       }}
     >
       <LazyLoadImage
-        placeholderSrc="blur"
+        alt="Profile pic"
+        effect="blur"
         src="/me.jpeg"
+        placeholderSrc="/me.jpeg"
         className="object-cover w-64 h-72 md:h-96 md:w-80 imageBlob"
       />
     </motion.div>
