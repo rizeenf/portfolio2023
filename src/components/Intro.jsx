@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import React, { lazy } from "react";
+import { Loader2 } from "lucide-react";
+import React, { Suspense, lazy } from "react";
 
 const ImageIntro = lazy(() => import("./ImageIntro"));
 
@@ -95,7 +96,13 @@ const Intro = () => {
           </div>
         </motion.div>
         <div className="flex flex-col items-center justify-center flex-1 right">
-          <ImageIntro />
+          <Suspense
+            fallback={
+              <Loader2 size={32} className="text-orange-300 animate-spin" />
+            }
+          >
+            <ImageIntro />
+          </Suspense>
         </div>
       </div>
     </div>

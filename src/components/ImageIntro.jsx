@@ -17,7 +17,12 @@ const ImageIntro = () => {
         type: "spring",
       }}
     >
-      <div className="object-cover w-64 h-72 md:h-96 md:w-80 imageBlob" />
+      <LazyLoadImage
+        src="/me.jpeg"
+        placeholderSrc="/me.jpeg"
+        effect="black-and-white"
+        className="object-cover w-64 h-72 md:h-96 md:w-80 imageBlob"
+      />
     </motion.div>
   );
 };
