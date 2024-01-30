@@ -25,7 +25,7 @@ function App() {
     <>
       <AnimatePresence>{isLoading && <Preloader />}</AnimatePresence>
       {!isLoading && (
-        <div className="h-screen overflow-x-hidden !scroll-smooth relative">
+        <div className="!scroll-smooth overflow-hidden relative">
           <Navbar />
           <Suspense fallback={"Loading .."}>
             <Intro />

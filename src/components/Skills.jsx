@@ -81,7 +81,7 @@ const Skills = () => {
       <motion.div
         initial={{
           opacity: 0,
-          y: "50%",
+          y: "20%",
         }}
         whileInView={{
           opacity: 1,

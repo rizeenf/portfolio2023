@@ -99,7 +99,7 @@ const Projects = () => {
           <motion.img
             initial={{
               opacity: 0,
-              x: "-100%",
+              x: "-10%",
             }}
             whileInView={{
               opacity: 1,
@@ -114,24 +114,24 @@ const Projects = () => {
             className="md:h-[20rem] min-[300px]:h-[12rem] rounded-xl"
           />
         </div>
-        <motion.div
-          initial={{
-            opacity: 0,
-            x: "100%",
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-          }}
-          transition={{
-            duration: 1.5,
-            type: "spring",
-          }}
-          className="right flex justify-center items-center flex-[2] max-h-[24rem] detail"
-        >
-          <div className="flex flex-col items-center justify-center gap-5 p-2 text-justify">
+        <div className="right flex justify-center items-center flex-[2] max-h-[24rem] detail">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: "10%",
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1.5,
+              type: "spring",
+            }}
+            className="flex flex-col items-center justify-center gap-5 p-2 text-justify"
+          >
             <span className="text-lg font-semibold ">MWatsapp | Chat Apps</span>
-            <span className="text-sm">
+            <span className="max-w-md text-sm">
               Chat application build using React for UI and Firebase for
               handling Auth and Storage (Firestore)
             </span>
@@ -145,6 +145,7 @@ const Projects = () => {
                   href="https://github.com/rizeenf/chat-react-firebase"
                   target="_blank"
                   className="flex flex-row items-center justify-center gap-3 text-sm "
+                  aria-label="link"
                 >
                   <img
                     src="https://cdn.cdnlogo.com/logos/g/69/github-icon.svg"
@@ -159,6 +160,7 @@ const Projects = () => {
                   href="https://rize-chatreact-firebase.vercel.app/"
                   target="_blank"
                   className="flex flex-row items-center justify-center gap-3 text-sm "
+                  aria-label="link"
                 >
                   <img
                     src="https://cdn.cdnlogo.com/logos/v/78/vercel.svg"
@@ -169,8 +171,8 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
 
       {projects.map((proj) => (
@@ -183,7 +185,7 @@ const Projects = () => {
           <motion.div
             initial={{
               opacity: 0,
-              x: "-50%",
+              x: "-10%",
             }}
             whileInView={{
               opacity: [0.1, 1],
@@ -202,24 +204,24 @@ const Projects = () => {
               className="md:h-[20rem] min-[300px]:h-[12rem] rounded-xl"
             />
           </motion.div>
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: "50%",
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            transition={{
-              duration: 1.5,
-              type: "spring",
-            }}
-            className="right flex justify-center items-center flex-[2] max-h-[24rem] detail"
-          >
-            <div className="flex flex-col items-center justify-center gap-5 p-2 text-justify">
+          <div className="right flex justify-center items-center flex-[2] max-h-[24rem] detail">
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: "20%",
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{
+                duration: 1.5,
+                type: "spring",
+              }}
+              className="flex flex-col items-center justify-center gap-5 p-2 text-justify"
+            >
               <span className="text-lg font-semibold ">{proj.name}</span>
-              <span className="text-sm">{proj.desc}</span>
+              <span className="max-w-md text-sm">{proj.desc}</span>
               <span className="text-base font-medium">
                 <span className="font-normal">Tech : </span>
                 {proj.framework}
@@ -230,6 +232,7 @@ const Projects = () => {
                     href={proj.src}
                     target="_blank"
                     className="flex flex-row items-center justify-center gap-3 text-sm "
+                    aria-label="link"
                   >
                     <img
                       src="https://cdn.cdnlogo.com/logos/g/69/github-icon.svg"
@@ -244,6 +247,7 @@ const Projects = () => {
                     href={proj.demo}
                     target="_blank"
                     className="flex flex-row items-center justify-center gap-3 text-sm "
+                    aria-label="link"
                   >
                     <img
                       src="https://cdn.cdnlogo.com/logos/v/78/vercel.svg"
@@ -254,8 +258,8 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       ))}
     </div>

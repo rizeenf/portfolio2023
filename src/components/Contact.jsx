@@ -38,7 +38,7 @@ const Contact = () => {
           transition={{
             duration: 0.5,
           }}
-          className="flex items-center gap-2  md:text-3xl min-[300px]:text-2xl text-center text-gray-700"
+          className="flex items-center gap-2 text-2xl text-center text-gray-700 md:text-3xl"
         >
           <motion.img
             initial={{
@@ -69,7 +69,7 @@ const Contact = () => {
       <motion.div
         initial={{
           opacity: 0,
-          y: "50%",
+          y: "10%",
         }}
         whileInView={{
           opacity: 1,
@@ -90,6 +90,7 @@ const Contact = () => {
                   href="https://wa.me/6287786653726"
                   className="flex flex-row items-center hover:text-orange-400"
                   target="_blank"
+                  aria-label="link"
                 >
                   <MessageCircle />
                   (+62)877 8665 3726
@@ -108,8 +109,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col min-[300px]:items-center md:items-start justify-center flex-1 left">
-          <form className="flex flex-col gap-3 p-5 rounded-sm ">
+        <div className="flex flex-col items-center justify-center flex-1 md:items-start left">
+          <form className="flex flex-col gap-3 p-5 px-10 rounded-sm sm:p-10 ">
             <div className="flex flex-row gap-2">
               <input
                 type="text"
@@ -150,7 +151,7 @@ const Contact = () => {
             />
             <div className="flex flex-row items-center justify-between gap-2">
               <div className="flex flex-row items-center gap-2">
-                <label htmlFor="check" hidden aria-hidden="true" />
+                <label htmlFor="check" hidden />
                 <input type="checkbox" name="check" id="checkbox" required />
                 <span className="text-[0.6rem] text-gray-500">
                   I'm agreed to Terms & Conditions

@@ -32,32 +32,49 @@ const Navbar = () => {
       }}
       className="!sticky top-0 left-0 h-[7svh] bg-orange-50 flex w-full flex-row justify-between px-8 md:px-40 items-center transition-all duration-200 shadow !z-10"
     >
-      <a href="#home" className="flex flex-row items-center gap-2 left">
+      <a
+        href="#home"
+        aria-label="home"
+        className="flex flex-row items-center gap-2 left"
+      >
         <img src="/logo.svg" alt="Logo" className="w-10" />
         <span className="italic font-thin ">RizkiNrp</span>
       </a>
       <div className="right">
-        <ul className=" min-[300px]:hidden md:flex flex-row gap-5 justify-center items-center text-xs ">
+        <div className=" min-[300px]:hidden md:flex flex-row gap-5 justify-center items-center text-xs ">
           <div className="flex flex-row items-center gap-5">
             <a
               href="https://www.linkedin.com/in/rizki-nurpadilah/"
               target="_blank"
+              aria-label="link"
             >
               <Linkedin size={16} color="orangered" />
             </a>
-            <a href="https://github.com/rizeenf" target="_blank">
+            <a
+              href="https://github.com/rizeenf"
+              target="_blank"
+              aria-label="link"
+            >
               <Github size={16} color="orangered" />
             </a>
-            <a href="https://twitter.com/rizenf" target="_blank">
+            <a
+              href="https://twitter.com/rizenf"
+              target="_blank"
+              aria-label="link"
+            >
               <Twitter size={16} color="orangered" />
             </a>
-            <a href="https://www.facebook.com/rizenf" target="_blank">
+            <a
+              href="https://www.facebook.com/rizenf"
+              target="_blank"
+              aria-label="link"
+            >
               <Facebook size={16} color="orangered" />
             </a>
           </div>
-        </ul>
+        </div>
 
-        <div className=" sm:block md:hidden">
+        <div className="sm:block md:hidden">
           <AlignJustify onClick={handleOpened} className="cursor-pointer " />
         </div>
         <ListMenu isOpened={isOpened} handleOpened={handleOpened} />

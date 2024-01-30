@@ -1,4 +1,4 @@
-import { AlignRight, Code2, Home, Layers3, UserRound, X } from "lucide-react";
+import { Code2, Home, Layers3, UserRound, X } from "lucide-react";
 import React from "react";
 
 const ListMenu = ({ isOpened, handleOpened }) => {
