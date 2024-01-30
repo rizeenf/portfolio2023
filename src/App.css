@@ -1,7 +1,7 @@
 .imageBlob {
-  /* background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/me.jpeg); */
+  background-image: url(/me.jpeg);
   animation: blobob 4s ease-in-out infinite alternate;
   border: 2px orangered dashed;
 }

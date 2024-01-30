@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 const ImageIntro = () => {
   return (
@@ -17,11 +17,9 @@ const ImageIntro = () => {
         type: "spring",
       }}
     >
-      <LazyLoadImage
-        src="/me.jpeg"
-        placeholderSrc="/me.jpeg"
-        effect="black-and-white"
+      <div
         className="object-cover w-64 h-72 md:h-96 md:w-80 imageBlob"
+        aria-hidden="true"
       />
     </motion.div>
   );
