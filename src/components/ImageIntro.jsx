@@ -19,9 +19,9 @@ const ImageIntro = () => {
     >
       <LazyLoadImage
         alt="Profile pic"
-        effect="blur"
         src="/me.jpeg"
         placeholderSrc="/me.jpeg"
+        effect="black-and-white"
         className="object-cover w-64 h-72 md:h-96 md:w-80 imageBlob"
       />
     </motion.div>
