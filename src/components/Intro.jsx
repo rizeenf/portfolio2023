@@ -96,9 +96,24 @@ const Intro = () => {
           </div>
         </motion.div>
         <div className="flex flex-col items-center justify-center flex-1 right">
-          <Suspense fallback={<Load />}>
-            <ImageIntro />
-          </Suspense>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: "50%",
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1.5,
+              type: "spring",
+            }}
+          >
+            <Suspense fallback={<Load />}>
+              <ImageIntro />
+            </Suspense>
+          </motion.div>
         </div>
       </div>
     </div>
