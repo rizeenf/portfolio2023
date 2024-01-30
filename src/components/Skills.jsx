@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const skill = [
   {
@@ -74,26 +75,93 @@ const skillLearning = [
 const Skills = () => {
   return (
     <div
-      className="h-[93svh] snap-end flex justify-center items-center"
+      className="h-[100svh] snap-end flex justify-center items-center"
       id="skills"
     >
-      <div className="flex flex-col items-center justify-center header ">
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: "50%",
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          delay: 0.35,
+          duration: 1.5,
+          type: "spring",
+        }}
+        className="flex flex-col items-center justify-center header"
+      >
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-base font-bold text-gray-400">TECH STACK</h1>
-          <h4 className="flex items-center gap-2 md:text-3xl min-[300px]:text-2xl text-center text-gray-700">
-            <img
+          <motion.h1
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+            }}
+            className="text-base font-bold text-gray-400"
+          >
+            TECH STACK
+          </motion.h1>
+          <motion.h4
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+            }}
+            className="flex items-center gap-2 md:text-3xl min-[300px]:text-2xl text-center text-gray-700"
+          >
+            <motion.img
+              initial={{
+                rotate: "-5deg",
+                scale: 1,
+              }}
+              animate={{
+                rotate: "5deg",
+                scale: 1,
+              }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                repeatType: "mirror",
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
               src="/terminal.png"
               alt="terminal"
               className="object-cover h-10 aspect-square"
-            />
+            />{" "}
             My skills, my journey.
-          </h4>
+          </motion.h4>
         </div>
 
         <h4 className="mt-5 text-base text-gray-700 uppercase">Using Now : </h4>
         <div className="flex mt-5 flex-row flex-wrap items-center min-[300px]:max-w-xs md:max-w-xl justify-around gap-10">
           {skill.map((item) => (
-            <div
+            <motion.div
+              initial={{
+                scale: 1,
+              }}
+              whileHover={{
+                scale: 1.2,
+              }}
+              transition={{
+                type: "spring",
+                duration: 1,
+              }}
               className="flex flex-col items-center justify-between gap-2 item "
               key={item.id}
             >
@@ -105,13 +173,23 @@ const Skills = () => {
               <span className="text-xs font-thin text-gray-700 uppercase">
                 {item.name}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
         <h4 className="my-5 text-base text-gray-600 uppercase">learning :</h4>
         <div className="flex flex-row flex-wrap items-center min-[300px]:max-w-xs md:max-w-xl justify-around gap-10">
           {skillLearning.map((item) => (
-            <div
+            <motion.div
+              initial={{
+                scale: 1,
+              }}
+              whileHover={{
+                scale: 1.2,
+              }}
+              transition={{
+                type: "spring",
+                duration: 1,
+              }}
               className="flex flex-col items-center justify-between gap-2 item "
               key={item.id}
             >
@@ -123,10 +201,10 @@ const Skills = () => {
               <span className="text-xs font-thin text-gray-600 uppercase">
                 {item.name}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

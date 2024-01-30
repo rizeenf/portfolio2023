@@ -1,31 +1,87 @@
+import { motion } from "framer-motion";
 import {
-  AlignJustify,
   Facebook,
   Github,
   Linkedin,
-  MessageSquare,
-  MessageSquarePlus,
+  MessageCircle,
   Twitter,
 } from "lucide-react";
 
 const Contact = () => {
   return (
     <div
-      className="h-[93svh] snap-end flex flex-col justify-between "
+      className="h-[93svh] snap-end flex flex-col justify-between"
       id="contact"
     >
       <div className="flex flex-col items-center justify-center">
-        <h1 className="mt-3 text-base font-bold text-gray-400">CONTACT ME</h1>
-        <h4 className="flex items-center gap-2  md:text-3xl min-[300px]:text-2xl text-center text-gray-700">
-          <img
+        <motion.h1
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.5,
+            duration: 0.5,
+          }}
+          className="mt-10 text-base font-bold text-gray-400"
+        >
+          CONTACT ME
+        </motion.h1>
+        <motion.h4
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.5,
+            duration: 0.5,
+          }}
+          className="flex items-center gap-2  md:text-3xl min-[300px]:text-2xl text-center text-gray-700"
+        >
+          <motion.img
+            initial={{
+              rotate: "-5deg",
+              scale: 1,
+            }}
+            animate={{
+              rotate: "5deg",
+              scale: 1,
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatType: "mirror",
+            }}
+            whileHover={{
+              scale: 1.1,
+            }}
             src="/contact.svg"
             alt="contact"
             className="object-cover h-10 aspect-square"
           />
           Share me your thoughts !
-        </h4>
+        </motion.h4>
       </div>
-      <div className="flex flex-[16] min-[300px]:flex-col md:flex-row h-full gap-5 min-[300px]:p-10 md:px-40 wrapper">
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: "50%",
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          delay: 0.35,
+          duration: 1.5,
+          type: "spring",
+        }}
+        className="flex flex-[16] flex-col md:flex-row h-full gap-5 p-10 py-20 md:px-40 wrapper"
+      >
         <div className="flex flex-col min-[300px]:items-center md:items-end justify-center flex-1 right">
           <div className="flex flex-col p-10 border rounded-xl h-[16rem] w-[22rem]">
             <div className="flex flex-col flex-1 top">
@@ -33,10 +89,10 @@ const Contact = () => {
               <span>
                 <a
                   href="https://wa.me/6287786653726"
-                  className="flex flex-row hover:text-orange-400"
+                  className="flex flex-row items-center hover:text-orange-400"
                   target="_blank"
                 >
-                  <MessageSquarePlus />
+                  <MessageCircle />
                   (+62)877 8665 3726
                 </a>
               </span>
@@ -49,10 +105,6 @@ const Contact = () => {
               <div className="text-xs">
                 <strong> Address : </strong>
                 <span className="">Jalan Bintara 14, Bekasi 17134</span>
-              </div>
-              <div className="text-xs">
-                <strong> Email : </strong>
-                <span className="">rizenf11@gmail.com</span>
               </div>
             </div>
           </div>
@@ -99,7 +151,7 @@ const Contact = () => {
             />
             <div className="flex flex-row items-center justify-between gap-2">
               <div className="flex flex-row items-center gap-2">
-                <input type="checkbox" name="checkbox" id="checkbox" />
+                <input type="checkbox" name="checkbox" id="checkbox" required />
                 <span className="text-[0.6rem] text-gray-500">
                   I'm agreed to Terms & Conditions
                 </span>
@@ -112,16 +164,31 @@ const Contact = () => {
             </div>
           </form>
         </div>
-      </div>
-      <div className="flex flex-row items-center justify-between flex-1 min-[300px]:px-[2rem] md:px-40 bg-orange-50 min-h-[3rem] ">
-        <div className="flex flex-row items-center gap-2">
+      </motion.div>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: "50%",
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          delay: 0.5,
+          duration: 1.5,
+          type: "spring",
+        }}
+        className="flex flex-row items-center justify-between flex-1 min-[300px]:px-[2rem] md:px-40 bg-orange-50 min-h-[3rem] "
+      >
+        <div className="flex-row items-center hidden gap-2 sm:flex">
           <img src="/logo.svg" alt="Logo" className="w-10" />
           <span className="text-[0.7rem] italic font-thin text-gray-700">
             RizkiNrp
           </span>
         </div>
         <span className="text-[0.6rem] text-gray-400">
-          Copyright 2023. All Rights Reserved
+          Copyright 2023 - {new Date().getFullYear()}. All Rights Reserved
         </span>
         <div className="flex flex-row items-center gap-5">
           <a
@@ -140,7 +207,7 @@ const Contact = () => {
             <Facebook size={16} color="orangered" />
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

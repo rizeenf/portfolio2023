@@ -1,16 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const projects = [
-  // {
-  //   id: 1,
-  //   link: "rize-chatreact-firebase.vercel.app/",
-  //   img: "/projChatApp.png",
-  //   name: "MWatsapp | Chat Apps",
-  //   desc: "Chat application build using React for UI and Firebase for handling Auth and Storage (Firestore)",
-  //   framework: "React, Tailwind, Firebase",
-  //   demo: "https://rize-chatreact-firebase.vercel.app/",
-  //   src: "https://github.com/rizeenf/chat-react-firebase",
-  // },
   {
     id: 2,
     link: "rize-socialmedia.vercel.app",
@@ -48,30 +39,97 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div
-      className="overflow-x-hidden snap-mandatory snap-y snap-start no-scrollbar"
-      id="projects"
-    >
+    <div className="py-20" id="projects">
       <div className="flex flex-col items-center justify-center mb-3 snap-start snap-always header">
-        <h1 className="mt-3 text-base font-bold text-gray-400">MY PROJECTS</h1>
-        <h4 className="flex items-center gap-2 md:text-3xl min-[300px]:text-xl text-center text-gray-700">
-          <img
+        <motion.h1
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.5,
+            duration: 0.5,
+          }}
+          className="mt-3 text-base font-bold text-gray-400"
+        >
+          MY PROJECTS
+        </motion.h1>
+        <motion.h4
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.5,
+            duration: 0.5,
+          }}
+          className="flex items-center gap-2 text-xl text-center text-gray-700 md:text-3xl"
+        >
+          <motion.img
+            initial={{
+              rotate: "-5deg",
+              scale: 1,
+            }}
+            animate={{
+              rotate: "5deg",
+              scale: 1,
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatType: "mirror",
+            }}
+            whileHover={{
+              scale: 1.1,
+            }}
             src="/clipboard.png"
             alt="clipboard"
-            className="object-cover h-10 aspect-square"
+            className="object-cover h-14 aspect-square"
           />
           Each project is a unique <br /> piece of my development
-        </h4>
+        </motion.h4>
       </div>
       <div className="flex min-[300px]:flex-col md:flex-row items-center justify-center h-[77svh] gap-5 border-b p-14 bg-gray-50">
         <div className="left flex-[3] flex justify-center items-center aspect-video object-cover overflow-hidden">
-          <img
+          <motion.img
+            initial={{
+              opacity: 0,
+              x: "-100%",
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              delay: 0.3,
+              duration: 1.5,
+              type: "spring",
+            }}
             src="/projChatapp2.png"
             alt="projChatapp2.png"
             className="md:h-[20rem] min-[300px]:h-[12rem] rounded-xl"
           />
         </div>
-        <div className="right flex justify-center items-center flex-[2] max-h-[24rem] detail">
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: "100%",
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            delay: 0.3,
+            duration: 1.5,
+            type: "spring",
+          }}
+          className="right flex justify-center items-center flex-[2] max-h-[24rem] detail"
+        >
           <div className="flex flex-col items-center justify-center gap-5 p-2 text-justify">
             <span className="text-lg font-semibold ">MWatsapp | Chat Apps</span>
             <span className="text-sm">
@@ -113,7 +171,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {projects.map((proj) => (
@@ -123,14 +181,44 @@ const Projects = () => {
           ${proj.color ? `${proj.color}` : `bg-gray-50`} 
           ${proj.id % 2 == 0 ? "md:flex-row-reverse" : "md:flex-row"}`}
         >
-          <div className="left flex-[3] flex justify-center items-center aspect-video object-cover overflow-hidden">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: "-50%",
+            }}
+            whileInView={{
+              opacity: [0.1, 1],
+              x: 0,
+            }}
+            transition={{
+              delay: 0.3,
+              duration: 1.5,
+              type: "spring",
+            }}
+            className="left flex-[3] flex justify-center items-center aspect-video object-cover overflow-hidden"
+          >
             <img
               src={proj.img}
               alt={proj.img}
               className="md:h-[20rem] min-[300px]:h-[12rem] rounded-xl"
             />
-          </div>
-          <div className="right flex justify-center items-center flex-[2] max-h-[24rem] detail">
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: "50%",
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              delay: 0.3,
+              duration: 1.5,
+              type: "spring",
+            }}
+            className="right flex justify-center items-center flex-[2] max-h-[24rem] detail"
+          >
             <div className="flex flex-col items-center justify-center gap-5 p-2 text-justify">
               <span className="text-lg font-semibold ">{proj.name}</span>
               <span className="text-sm">{proj.desc}</span>
@@ -169,7 +257,7 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       ))}
     </div>

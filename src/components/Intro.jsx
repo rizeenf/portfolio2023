@@ -1,36 +1,101 @@
 import React, { Suspense, lazy } from "react";
 import Load from "./Load";
+import { motion } from "framer-motion";
 
 const ImageIntro = lazy(() => import("./ImageIntro"));
 
 const Intro = () => {
   return (
     <div className="h-[93svh] snap-end" id="home">
-      <div className="flex h-full gap-5 px-10 wrapper md:flex-row min-[300px]:flex-col-reverse">
-        <div className="flex flex-col items-center justify-center flex-1 left">
-          <h1 className="text-3xl font-extrabold text-center">
+      <div className="flex flex-col-reverse h-full gap-5 px-10 py-10 wrapper md:flex-row">
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: "-100%",
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            delay: 0.3,
+            duration: 1.5,
+            type: "spring",
+          }}
+          className="flex flex-col items-center justify-center flex-1 left"
+        >
+          <h1 className="flex flex-row flex-wrap justify-center gap-3 text-4xl font-extrabold text-center">
             Hi there! I'm{" "}
-            <span className="tracking-wide text-orange-600 "> Rizki </span>
+            <span className="flex flex-row gap-3 tracking-wide text-orange-600">
+              Rizki
+              <motion.div
+                initial={{
+                  rotate: "-10deg",
+                }}
+                animate={{
+                  rotate: "10deg",
+                }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              >
+                👋
+              </motion.div>
+            </span>
           </h1>
-          <h1 className="md:text-base min-[300px]:text-sm text-center">
+          <h1 className="mt-1 text-lg text-center">
             I'm a Frontend Web developer based in Bekasi, Indonesia
           </h1>
           <div className="flex gap-5 mt-5 text-center">
-            <a
+            <motion.a
+              initial={{
+                rotate: 0,
+                scale: 1,
+              }}
+              whileHover={{
+                scale: 1.1,
+                rotate: "2deg",
+              }}
+              whileTap={{
+                scale: 0.9,
+                rotate: "0deg",
+              }}
+              transition={{
+                duration: 0.2,
+                type: "spring",
+              }}
               href="#projects"
               className="p-2 text-xs text-white transition-all duration-300 bg-orange-400 border border-white rounded-lg shadow cursor-default hover:bg-white hover:border-orange-400 hover:text-orange-500"
             >
               My projects
-            </a>
-            <a
-              href="/RIZKI NURPADILAH - CV REACT JS.pdf"
+            </motion.a>
+            <motion.a
+              initial={{
+                rotate: 0,
+                scale: 1,
+              }}
+              whileHover={{
+                scale: 1.1,
+                rotate: "-2deg",
+              }}
+              whileTap={{
+                scale: 0.9,
+                rotate: "0deg",
+              }}
+              transition={{
+                duration: 0.2,
+                type: "spring",
+              }}
+              target="_blank"
+              href="https://drive.google.com/file/d/1c--YL19wz1EjEo0AjzqJXfCtCgs7StzI/view?usp=sharing"
               className="p-2 text-xs text-orange-500 transition-all duration-300 bg-white border border-orange-400 rounded-lg shadow cursor-default hover:bg-orange-500 hover:border-white hover:text-white"
-              download
             >
               Get my resume
-            </a>
+            </motion.a>
           </div>
-        </div>
+        </motion.div>
         <div className="flex flex-col items-center justify-center flex-1 right">
           <Suspense fallback={<Load />}>
             <ImageIntro />
