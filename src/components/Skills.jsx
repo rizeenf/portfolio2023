@@ -88,7 +88,6 @@ const Skills = () => {
           y: 0,
         }}
         transition={{
-          delay: 0.35,
           duration: 1.5,
           type: "spring",
         }}
@@ -103,14 +102,13 @@ const Skills = () => {
               opacity: 1,
             }}
             transition={{
-              delay: 0.5,
               duration: 0.5,
             }}
             className="text-base font-bold text-gray-400"
           >
             TECH STACK
           </motion.h1>
-          <motion.h4
+          <motion.div
             initial={{
               opacity: 0,
             }}
@@ -118,7 +116,6 @@ const Skills = () => {
               opacity: 1,
             }}
             transition={{
-              delay: 0.5,
               duration: 0.5,
             }}
             className="flex items-center gap-2 md:text-3xl min-[300px]:text-2xl text-center text-gray-700"
@@ -143,12 +140,14 @@ const Skills = () => {
               src="/terminal.png"
               alt="terminal"
               className="object-cover h-10 aspect-square"
-            />{" "}
-            My skills, my journey.
-          </motion.h4>
+            />
+            <h1 className="md:text-3xl min-[300px]:text-2xl text-center text-gray-700">
+              My skills, my journey.
+            </h1>
+          </motion.div>
         </div>
 
-        <h4 className="mt-5 text-base text-gray-700 uppercase">Using Now : </h4>
+        <h1 className="mt-5 text-base text-gray-700 uppercase">Using Now : </h1>
         <div className="flex mt-5 flex-row flex-wrap items-center min-[300px]:max-w-xs md:max-w-xl justify-around gap-10">
           {skill.map((item) => (
             <motion.div
@@ -176,7 +175,7 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-        <h4 className="my-5 text-base text-gray-600 uppercase">learning :</h4>
+        <h1 className="my-5 text-base text-gray-600 uppercase">learning :</h1>
         <div className="flex flex-row flex-wrap items-center min-[300px]:max-w-xs md:max-w-xl justify-around gap-10">
           {skillLearning.map((item) => (
             <motion.div

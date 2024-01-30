@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 const ImageIntro = () => {
   return (
@@ -13,11 +14,13 @@ const ImageIntro = () => {
       }}
       transition={{
         duration: 1.5,
-        delay: 0.3,
         type: "spring",
       }}
     >
-      <div className="w-64 h-72 md:h-96 md:w-80 imageBlob" />
+      <div
+        className="object-cover w-64 h-72 md:h-96 md:w-80 imageBlob"
+        aria-hidden="true"
+      />
     </motion.div>
   );
 };

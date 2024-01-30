@@ -16,7 +16,6 @@ const About = () => {
               x: 0,
             }}
             transition={{
-              delay: 0.3,
               duration: 1.5,
               type: "spring",
             }}
@@ -36,7 +35,6 @@ const About = () => {
               x: 0,
             }}
             transition={{
-              delay: 0.3,
               duration: 1.5,
               type: "spring",
             }}
