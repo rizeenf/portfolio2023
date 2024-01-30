@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const projects = [
   {
@@ -49,14 +50,13 @@ const Projects = () => {
             opacity: 1,
           }}
           transition={{
-            delay: 0.5,
             duration: 0.5,
           }}
           className="mt-3 text-base font-bold text-gray-400"
         >
           MY PROJECTS
         </motion.h1>
-        <motion.h4
+        <motion.div
           initial={{
             opacity: 0,
           }}
@@ -64,7 +64,6 @@ const Projects = () => {
             opacity: 1,
           }}
           transition={{
-            delay: 0.5,
             duration: 0.5,
           }}
           className="flex items-center gap-2 text-xl text-center text-gray-700 md:text-3xl"
@@ -90,8 +89,10 @@ const Projects = () => {
             alt="clipboard"
             className="object-cover h-14 aspect-square"
           />
-          Each project is a unique <br /> piece of my development
-        </motion.h4>
+          <h4 className="text-xl text-center text-gray-700 md:text-3xl">
+            Each project is a unique <br /> piece of my development
+          </h4>
+        </motion.div>
       </div>
       <div className="flex min-[300px]:flex-col md:flex-row items-center justify-center h-[77svh] gap-5 border-b p-14 bg-gray-50">
         <div className="left flex-[3] flex justify-center items-center aspect-video object-cover overflow-hidden">
@@ -105,7 +106,6 @@ const Projects = () => {
               x: 0,
             }}
             transition={{
-              delay: 0.3,
               duration: 1.5,
               type: "spring",
             }}
@@ -124,7 +124,6 @@ const Projects = () => {
             x: 0,
           }}
           transition={{
-            delay: 0.3,
             duration: 1.5,
             type: "spring",
           }}
@@ -191,13 +190,13 @@ const Projects = () => {
               x: 0,
             }}
             transition={{
-              delay: 0.3,
               duration: 1.5,
               type: "spring",
             }}
             className="left flex-[3] flex justify-center items-center aspect-video object-cover overflow-hidden"
           >
-            <img
+            <LazyLoadImage
+              placeholderSrc="blur"
               src={proj.img}
               alt={proj.img}
               className="md:h-[20rem] min-[300px]:h-[12rem] rounded-xl"
@@ -213,7 +212,6 @@ const Projects = () => {
               x: 0,
             }}
             transition={{
-              delay: 0.3,
               duration: 1.5,
               type: "spring",
             }}

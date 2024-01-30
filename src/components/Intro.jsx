@@ -1,6 +1,5 @@
-import React, { Suspense, lazy } from "react";
-import Load from "./Load";
 import { motion } from "framer-motion";
+import React, { lazy } from "react";
 
 const ImageIntro = lazy(() => import("./ImageIntro"));
 
@@ -18,7 +17,6 @@ const Intro = () => {
             x: 0,
           }}
           transition={{
-            delay: 0.3,
             duration: 1.5,
             type: "spring",
           }}
@@ -97,9 +95,7 @@ const Intro = () => {
           </div>
         </motion.div>
         <div className="flex flex-col items-center justify-center flex-1 right">
-          <Suspense fallback={<Load />}>
-            <ImageIntro />
-          </Suspense>
+          <ImageIntro />
         </div>
       </div>
     </div>
