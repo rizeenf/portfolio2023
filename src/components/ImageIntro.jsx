@@ -17,13 +17,7 @@ const ImageIntro = () => {
         type: "spring",
       }}
     >
-      <LazyLoadImage
-        alt="Profile pic"
-        src="/me.jpeg"
-        placeholderSrc="/me.jpeg"
-        effect="black-and-white"
-        className="object-cover w-64 h-72 md:h-96 md:w-80 imageBlob"
-      />
+      <div className="object-cover w-64 h-72 md:h-96 md:w-80 imageBlob" />
     </motion.div>
   );
 };

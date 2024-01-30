@@ -89,9 +89,9 @@ const Projects = () => {
             alt="clipboard"
             className="object-cover h-14 aspect-square"
           />
-          <h4 className="text-xl text-center text-gray-700 md:text-3xl">
+          <h1 className="text-xl text-center text-gray-700 md:text-3xl">
             Each project is a unique <br /> piece of my development
-          </h4>
+          </h1>
         </motion.div>
       </div>
       <div className="flex min-[300px]:flex-col md:flex-row items-center justify-center h-[77svh] gap-5 border-b p-14 bg-gray-50">

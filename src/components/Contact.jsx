@@ -61,9 +61,9 @@ const Contact = () => {
             alt="contact"
             className="object-cover h-10 aspect-square"
           />
-          <h4 className="md:text-3xl min-[300px]:text-2xl text-center text-gray-700">
+          <h1 className="md:text-3xl min-[300px]:text-2xl text-center text-gray-700">
             Share me your thoughts !
-          </h4>
+          </h1>
         </motion.div>
       </div>
       <motion.div
@@ -150,7 +150,8 @@ const Contact = () => {
             />
             <div className="flex flex-row items-center justify-between gap-2">
               <div className="flex flex-row items-center gap-2">
-                <input type="checkbox" id="checkbox" required />
+                <label htmlFor="check" hidden aria-hidden="true" />
+                <input type="checkbox" name="check" id="checkbox" required />
                 <span className="text-[0.6rem] text-gray-500">
                   I'm agreed to Terms & Conditions
                 </span>

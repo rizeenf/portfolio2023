@@ -141,13 +141,13 @@ const Skills = () => {
               alt="terminal"
               className="object-cover h-10 aspect-square"
             />
-            <h4 className="md:text-3xl min-[300px]:text-2xl text-center text-gray-700">
+            <h1 className="md:text-3xl min-[300px]:text-2xl text-center text-gray-700">
               My skills, my journey.
-            </h4>
+            </h1>
           </motion.div>
         </div>
 
-        <h4 className="mt-5 text-base text-gray-700 uppercase">Using Now : </h4>
+        <h1 className="mt-5 text-base text-gray-700 uppercase">Using Now : </h1>
         <div className="flex mt-5 flex-row flex-wrap items-center min-[300px]:max-w-xs md:max-w-xl justify-around gap-10">
           {skill.map((item) => (
             <motion.div
@@ -175,7 +175,7 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-        <h4 className="my-5 text-base text-gray-600 uppercase">learning :</h4>
+        <h1 className="my-5 text-base text-gray-600 uppercase">learning :</h1>
         <div className="flex flex-row flex-wrap items-center min-[300px]:max-w-xs md:max-w-xl justify-around gap-10">
           {skillLearning.map((item) => (
             <motion.div
