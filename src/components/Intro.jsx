@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
 import React, { Suspense, lazy } from "react";
+import Load from "./Load";
+import { motion } from "framer-motion";
 
 const ImageIntro = lazy(() => import("./ImageIntro"));
-const Load = lazy(() => import("./Load"));
 
 const Intro = () => {
   return (
@@ -18,6 +18,7 @@ const Intro = () => {
             x: 0,
           }}
           transition={{
+            delay: 0.3,
             duration: 1.5,
             type: "spring",
           }}

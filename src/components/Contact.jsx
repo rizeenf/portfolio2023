@@ -22,13 +22,14 @@ const Contact = () => {
             opacity: 1,
           }}
           transition={{
+            delay: 0.5,
             duration: 0.5,
           }}
           className="mt-10 text-base font-bold text-gray-400"
         >
           CONTACT ME
         </motion.h1>
-        <motion.div
+        <motion.h4
           initial={{
             opacity: 0,
           }}
@@ -36,6 +37,7 @@ const Contact = () => {
             opacity: 1,
           }}
           transition={{
+            delay: 0.5,
             duration: 0.5,
           }}
           className="flex items-center gap-2  md:text-3xl min-[300px]:text-2xl text-center text-gray-700"
@@ -61,10 +63,8 @@ const Contact = () => {
             alt="contact"
             className="object-cover h-10 aspect-square"
           />
-          <h1 className="md:text-3xl min-[300px]:text-2xl text-center text-gray-700">
-            Share me your thoughts !
-          </h1>
-        </motion.div>
+          Share me your thoughts !
+        </motion.h4>
       </div>
       <motion.div
         initial={{
@@ -76,6 +76,7 @@ const Contact = () => {
           y: 0,
         }}
         transition={{
+          delay: 0.35,
           duration: 1.5,
           type: "spring",
         }}
@@ -150,8 +151,7 @@ const Contact = () => {
             />
             <div className="flex flex-row items-center justify-between gap-2">
               <div className="flex flex-row items-center gap-2">
-                <label htmlFor="check" hidden aria-hidden="true" />
-                <input type="checkbox" name="check" id="checkbox" required />
+                <input type="checkbox" name="checkbox" id="checkbox" required />
                 <span className="text-[0.6rem] text-gray-500">
                   I'm agreed to Terms & Conditions
                 </span>
@@ -175,6 +175,7 @@ const Contact = () => {
           y: 0,
         }}
         transition={{
+          delay: 0.5,
           duration: 1.5,
           type: "spring",
         }}
@@ -193,29 +194,16 @@ const Contact = () => {
           <a
             href="https://www.linkedin.com/in/rizki-nurpadilah/"
             target="_blank"
-            aria-label="Linkedin link"
           >
             <Linkedin size={16} color="orangered" />
           </a>
-          <a
-            href="https://github.com/rizeenf"
-            target="_blank"
-            aria-label="Github link"
-          >
+          <a href="https://github.com/rizeenf" target="_blank">
             <Github size={16} color="orangered" />
           </a>
-          <a
-            href="https://twitter.com/rizenf"
-            target="_blank"
-            aria-label="Twitter link"
-          >
+          <a href="https://twitter.com/rizenf" target="_blank">
             <Twitter size={16} color="orangered" />
           </a>
-          <a
-            href="https://www.facebook.com/rizenf"
-            target="_blank"
-            aria-label="Facebook link"
-          >
+          <a href="https://www.facebook.com/rizenf" target="_blank">
             <Facebook size={16} color="orangered" />
           </a>
         </div>

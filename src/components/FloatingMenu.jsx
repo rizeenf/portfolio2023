@@ -14,13 +14,13 @@ const FloatingMenu = () => {
         x: 0,
       }}
       transition={{
+        delay: 0.5,
         duration: 1,
       }}
       className="fixed flex flex-row md:flex-col gap-2 p-1 bg-transparent border rounded-full min-[300px]:bottom-10 min-[300px]:left-1/3 md:bottom-1/2 md:left-3
     "
     >
       <motion.a
-        aria-label="Menu"
         initial={{
           rotate: "-5deg",
           scale: 1,
@@ -47,7 +47,6 @@ const FloatingMenu = () => {
         <Home size={15} />
       </motion.a>
       <motion.a
-        aria-label="Menu"
         initial={{
           rotate: "-5deg",
           scale: 1,
@@ -74,7 +73,6 @@ const FloatingMenu = () => {
         <UserRound size={15} />
       </motion.a>
       <motion.a
-        aria-label="Menu"
         initial={{
           rotate: "-5deg",
           scale: 1,
@@ -101,7 +99,6 @@ const FloatingMenu = () => {
         <Code2 size={15} />
       </motion.a>
       <motion.a
-        aria-label="Menu"
         initial={{
           rotate: "-5deg",
           scale: 1,
@@ -128,7 +125,6 @@ const FloatingMenu = () => {
         <Layers3 size={15} />
       </motion.a>
       <motion.a
-        aria-label="Menu"
         initial={{
           rotate: "-5deg",
           scale: 1,
